@@ -1,0 +1,69 @@
+/*
+Ignorar Case
+Ignorar _
+Ignorar Acentuação
+Considerar subStrings(Contains)
+Considerar Distância entre strings
+*/
+
+package chatbot;
+
+import java.util.Scanner;
+
+class Chatbot
+{
+    public String lut[][];
+    public Chatbot()            
+    {
+        
+    lut = new String[10][2];
+        
+        lut[0][0] = "Pergunta A";
+        lut[0][1] = "Pergunta A";
+    
+        lut[1][0] = "Pergunta B";
+        lut[1][1] = "Pergunta B";
+    }
+    public String ask(String question)
+    {
+            String answer = "Sorry idk.";               
+        boolean found = false;
+        boolean end = false;
+        int i = 0;
+        while (!found && !end)
+        {
+ //quanto mais complicar o if, ganha mais ponto
+            if(question.equals(lut[i][0]))
+            {
+                found = true;
+                answer = lut[i][1];
+            }
+        ++i;
+        if(i >= lut.length)
+        {
+            end = true;
+        }
+    }
+        return answer;
+    }
+}               
+public class Main {
+    
+    public static void main(String[] args) {
+    
+        Chatbot bot = new Chatbot();
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Dale, i'm a Chatbox! What you wanna know?");
+        String question = scanner.nextLine();
+      
+        while(!question.equals("exit"))
+        {   
+            System.out.println(bot.ask(question));
+            question = scanner.nextLine();
+         
+        }
+            
+    }
+    
+}
