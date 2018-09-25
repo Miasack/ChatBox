@@ -1,69 +1,322 @@
-/*
-Ignorar Case
-Ignorar _
-Ignorar Acentuação
-Considerar subStrings(Contains)
-Considerar Distância entre strings
-*/
+import java.text.Collator;
+import java.util.Locale;
+import java.util.Scanner;
 
-package chatbot;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Roberto Miasack
+
 
 import java.util.Scanner;
 
-class Chatbot
-{
+/**
+ *
+ * @author 01218992
+ */
+class Agent{
     public String lut[][];
-    public Chatbot()            
-    {
-        
-    lut = new String[10][2];
-        
-        lut[0][0] = "Pergunta A";
-        lut[0][1] = "Pergunta A";
     
-        lut[1][0] = "Pergunta B";
-        lut[1][1] = "Pergunta B";
+  
+    public Agent(){
+        
+ 
+        
+        lut= new String[54][2];{
+        lut[0][0] = "Qual é o nome do primeiro feitiço que a Hermione usa ?";
+        lut[0][1] = "Óculos repare";
+    
+        lut[1][0] = "Qual a disculpa que Harry Potter da para o professor Quirrell , quando olha para o espelho ?";
+        lut[1][1] = "Não vejo nada.";
+        
+        lut[2][0] = "Por que Harry Potter quando encosta Quirrell ele se queima ?";
+        lut[2][1] = "Por causa do amor de sua mãe .";
+        
+        lut[3][0] = "Qual é o nome completo de harry Potter ?";
+        lut[3][1] = "Harry James Potter";
+        
+        lut[4][0] = "ual o presente que Harry Potter ganha de Natal ?";
+        lut[4][1] = "A Capa da Invisibilidade .";
+        
+        lut[5][0] = "Qual é o nome que Harry Potter da a sua coruja ?";
+        lut[5][1] = "Edwiges.";
+        
+        lut[6][0] = "Quantos pontos no TOTAL são adicionados a Griffindor no final ?";
+        lut[6][1] = "170 pontos.";
+        
+        lut[7][0] = "De qual animal Voldemort aparece bebendo o sangue ?";
+        lut[7][1] = "Unicórnio .";
+        
+        lut[8][0] = "Em que casa a Hermione estava no jogo de xadrez ?";
+        lut[8][1] = "Na Torre da Rainha .";
+        
+        lut[9][0] = "Quantos anos a atriz Emma Watson fez o primeiro filme ?";
+        lut[9][1] = "10";
+        
+        lut[10][0] = "Em Harry Potter e a pedra filosofal quais as pessoas que levam Harry ainda bêbê a casa dos seus tios Dursley?";
+        lut[10][1] = "Dumbledore, Minerva McGonagall e Hagrid";
+        
+        lut[11][0] = "Qual o nome do sapo perdido do Neville Longbottom?";
+        lut[11][1] = "Trevo";
+        
+        lut[12][0] = "Qual o número do cofre de Gringotes em que Hagrid pegou \"algo sigiloso\" para Dumbledore?(que no final descobrimos que esse \"algo sigiloso\" era a pedra filosofal)";
+        lut[12][1] = "713";
+        
+        lut[13][0] = "Qual o nome do monitor da grifinória?";
+        lut[13][1] = "Percy Weasley";
+        
+        lut[14][0] = "Qual o nome da bola em que Harry(apanhador) tem que pegar no jogo de Quadribol?";
+        lut[14][1] = "Pomo de ouro";
+        
+        lut[15][0] = "Qual os nomes dos colegas \"guarda-costas\" de Draco Malfoy?";
+        lut[15][1] = "Crabbbe e Goyle";
+        
+        lut[16][0] = "Qual o primeiro nome (apelido) do fantasma da Grifinória Quase-sem-cabeça?";
+        lut[16][1] = "Nick";
+        
+        lut[17][0] = "Qual o nome do espelho em que se vê os desejos mais profundos do seu coração?";
+        lut[17][1] = "Espelho de Osejed";
+        
+        lut[18][0] = "Qual o nome do cão de três cabeças que proteje o alçapão onde se encontra a pedra filosofal?";
+        lut[18][1] = "Fofo";
+        
+        lut[19][0] = "Qual o animal que Harry encontra na floresta proibida sendo sugado por Voldemort?";
+        lut[19][1] = "Unicórnio";
+        
+        lut[20][0] = "Qual a cor do turbante do professor Quirrel?";
+        lut[20][1] = "Roxo";
+        
+        lut[21][0] = "Qual o presente que Hagrid dá a Harry antes dele voltar para casa?";
+        lut[21][1] = "Álbum de fotos";
+        
+        lut[22][0] = "Qual o endereço da casa dos Dursley, os tios de Harry?";
+        lut[22][1] = "Rua dos Alfeneiros, n 4";
+        
+        lut[23][0] = "Qual a raça da cobra que Harry liberta do zoológico?";
+        lut[23][1] = "Jiboia";
+        
+        lut[24][0] = "Qual o número do cofre de Harry no bando de Gringotes?";
+        lut[24][1] = "687";
+        
+        lut[25][0] = "No vagão do Expresso de Hogwarts, em qual doce Harry encontra um cartão de Dumbledore?";
+        lut[25][1] = "Sapo de Chocolate";
+        
+        lut[26][0] = "Qual objeto Harry captura em sua aula de voo após Malfoy lançá-lo?";
+        lut[26][1] = "Lembrol";
+        
+        lut[27][0] = "Em qual andar se encontra Fofo, o cão de 3 cabeças?";
+        lut[27][1] = "3";
+        
+        lut[28][0] = "Quais são as bolas do quadribol?";
+        lut[28][1] = "Goles, Balaço e Pomo de Ouro";
+        
+        lut[29][0] = "Hermione se encontra encurralada por um Trasgo em qual data festiva?";
+        lut[29][1] = "dia das Bruxas";
+        
+        lut[30][0] = "Rony ocupa o lugar de qual peça no jogo de xadrez de bruxo, para pegarem a Pedra Filosofal?";
+        lut[30][1] = "cavalo";
+        
+        lut[31][0] = "Qual o nome do centauro que salva Harry de Voldemort na Floresta Proibida?";
+        lut[31][1] = "Firenze";
+        
+        lut[32][0] = "Harry derrotou Voldermort como?";
+        lut[32][1] = "Com o amor";
+        
+        lut[33][0] = "Qual casa fica com o 2 lugar na Copa das Casas?";
+        lut[33][1] = "Sonserina";
+        
+        lut[34][0] = "Que tipo de pena foi usada para fazer o núcleo da varinha de Lorde Voldemort?";
+        lut[34][1] = "pena de fênix";
+        
+        lut[35][0] = "Qual é o nome do professor de Feitiços?";
+        lut[35][1] = "Filio Flitwick";
+        
+        lut[36][0] = "O que Hagrid coloca em Duda quando ele come o bolo de Harry?";
+        lut[36][1] = "um rabo de porco";
+        
+        lut[37][0] = "Quando é o aniversário de Harry Potter?";
+        lut[37][1] = "31/06";
+        
+        lut[38][0] = "Quantos irmãos Rony tem?";
+        lut[38][1] = "5";
+        
+        lut[39][0] = "Como os alunos são classificados para as Casas de Hogwarts?";
+        lut[39][1] = "Chapéu Seletor";
+        
+        lut[40][0] = "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte. Por quê?";
+        lut[40][1] = "porque poderiam ter sido mortos enfrentando o trasgo";
+        
+        lut[41][0] = "O que Hagrid leva a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo?";
+        lut[41][1] = "bolo de aniversário";
+        
+        lut[42][0] = "Qual das alternativas a seguir mais se adequam na descrição da velha varinha de Rúbeo Hagrid?";
+        lut[42][1] = "carvalho, quarenta centímetros e meio mole";
+        
+        lut[43][0] = "Qual ano estava cursando, quando Hagrid foi expulso de Hogwarts?";
+        lut[43][1] = "3";
+        
+        lut[44][0] = "Quem assinou a carta de Hogwarts endereçada à Harry no inicio do livro?";
+        lut[44][1] = "Minerva";
+        
+        lut[50][0] = "";
+        lut[50][1] = "";
+        
+        lut[51][0] = "";
+        lut[52][1] = "";
+        
+        lut[53][0] = "";
+        lut[53][1] = "";
+        
+        lut[54][0] = "";
+        lut[54][1] = "";
+        
+        lut[55][0] = "";
+        lut[55][1] = "";
+        
+        lut[56][0] = "";
+        lut[56][1] = "";
+        
+        lut[57][0] = "";
+        lut[57][1] = "";
+        
+        lut[58][0] = "";
+        lut[58][1] = "";
+        
+        lut[59][0] = "";
+        lut[59][1] = "";
+        
+        lut[60][0] = "";
+        lut[60][1] = "";
+        
+        lut[61][0] = "";
+        lut[61][1] = "";
+        
+        lut[62][0] = "";
+        lut[62][1] = "";
+        
+        lut[63][0] = "";
+        lut[63][1] = "";
+        
+        lut[64][0] = "";
+        lut[64][1] = "";
+        
+        lut[65][0] = "";
+        lut[65][1] = "";
+        
+        lut[66][0] = "";
+        lut[66][1] = "";
+        
+        lut[67][0] = "";
+        lut[67][1] = "";
+        
+        lut[68][0] = "";
+        lut[68][1] = "";
+        
+        lut[69][0] = "";
+        lut[69][1] = "";
+        
+        lut[70][0] = "";
+        lut[70][1] = "";
+        
+        lut[71][0] = "";
+        lut[71][1] = "";
+        
+        lut[72][0] = "";
+        lut[72][1] = "";
+        
+        lut[73][0] = "";
+        lut[73][1] = "";
+        
+        lut[74][0] = "";
+        lut[74][1] = "";
+        
+        lut[75][0] = "";
+        lut[75][1] = "";
+        
+        lut[76][0] = "";
+        lut[76][1] = "";
+        
+        lut[77][0] = "";
+        lut[77][1] = "";
+        
+        lut[78][0] = "";
+        lut[78][1] = "";
+        
+        lut[79][0] = "";
+        lut[79][1] = "";
+        
+       
     }
+    
+   
+}
     public String ask(String question)
     {
-            String answer = "Sorry idk.";               
-        boolean found = false;
-        boolean end = false;
-        int i = 0;
-        while (!found && !end)
-        {
- //quanto mais complicar o if, ganha mais ponto
-            if(question.equals(lut[i][0]))
-            {
-                found = true;
-                answer = lut[i][1];
-            }
-        ++i;
-        if(i >= lut.length)
-        {
-            end = true;
+        
+        
+       String answer ="Idk, i'm sorry.";
+        boolean found =false;
+        boolean end=false;
+        int i= 0;
+   
+        
+       
+            
+            
+     //ignora letras maisculas de minusculas;  
+     while(!found && !end){
+       if(question.equalsIgnoreCase (lut[i][0])){
+           found = true;
+           answer =lut [i][1];
+       }++i;
+       if(i>=lut.length){
+           end=true;
+       }
+       //verifica se uma frase está contida na outra.
+       
+   }
+           
+        return answer;
+          
         }
     }
-        return answer;
-    }
-}               
+
 public class Main {
-    
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-    
-        Chatbot bot = new Chatbot();
+       
+       
+        System.out.println("Oi, sou um Potterhead.");
+        System.out.println("Qual a sua dúvida sobre A Pedra Filosofal?");
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Dale, i'm a Chatbox! What you wanna know?");
-        String question = scanner.nextLine();
-      
-        while(!question.equals("exit"))
-        {   
+        String  question = scanner .nextLine();
+        question= question.replace(".", "");
+        question= question.replace("/", "");
+        question= question.replace("?", "");
+        question= question.replace("-", "");
+        question= question.replace("é", "e");
+        question= question.replace("á", "a");
+        System.out.println("ebaa, estamos indo bem");
+        Agent bot= new Agent();
+        
+       
+        
+        while(!question.equals("sair"))
+        {
             System.out.println(bot.ask(question));
             question = scanner.nextLine();
-         
         }
-            
+        
+        
     }
     
 }
