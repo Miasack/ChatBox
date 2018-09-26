@@ -2,32 +2,19 @@ import java.text.Collator;
 import java.util.Locale;
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Roberto Miasack
+ /* @author Roberto Miasack
 
 
 import java.util.Scanner;
 
-/**
- *
- * @author 01218992
- */
 class Agent{
     public String lut[][];
-    
-  
+      
     public Agent(){
-        
- 
-        
+           
         lut= new String[54][2];{
+        
         lut[0][0] = "Qual é o nome do primeiro feitiço que a Hermione usa ?";
         lut[0][1] = "Óculos repare";
     
@@ -311,29 +298,18 @@ class Agent{
         lut[100][1] = "Severo Snape";
         
         lut[101][0] = "Qual o nome dos filhos de Hermione com Rony?";
-        lut[101][1] = "Rosa e Hugo";
-        
-        
-       
-       
-    }
-    
-   
+        lut[101][1] = "Rosa e Hugo";     
+    } 
 }
-    public String ask(String question)
-    {
-        
+    public String ask(String question){
         
        String answer ="Eu não sei! Trouxa!";
         boolean found =false;
         boolean end=false;
         int i= 0;
-   
-        
-       
-            
-            
-     //ignora letras maisculas de minusculas;  
+
+     //ignora letras maisculas de minusculas
+     
      while(!found && !end){
        if(question.equalsIgnoreCase (lut[i][0])){
            found = true;
@@ -341,47 +317,32 @@ class Agent{
        }++i;
        if(i>=lut.length){
            end=true;
+       }  
+       //verifica se uma frase está contida na outra.   
+}
+        return answer;  
        }
-       //verifica se uma frase está contida na outra.
-       
-   }
-           
-        return answer;
-          
-        }
-    }
-
+}
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String[] args) {
-       
-       
+      
         System.out.println("Oi, sou um Potterhead.");
-        System.out.println("Qual a sua dúvida sobre HP?");
-        
-        Scanner scanner = new Scanner(System.in);
-        String  question = scanner .nextLine();
-        question= question.replace(".", "");
-        question= question.replace("/", "");
-        question= question.replace("?", "");
-        question= question.replace("-", "");
-        question= question.replace("é", "e");
-        question= question.replace("á", "a");
-        System.out.println("ebaa, estamos indo bem");
-        Agent bot= new Agent();
-        
-       
-        
+            System.out.println("Qual a sua dúvida sobre HP?");
+                Scanner scanner = new Scanner(System.in);
+                    String  question = scanner .nextLine(); 
+                        question= question.replace(".", "");
+                            question= question.replace("/", "");
+                                question= question.replace("?", "");
+                            question= question.replace("-", "");
+                        question= question.replace("é", "e");   
+                    question= question.replace("á", "a");   
+                System.out.println("Good!");
+            Agent bot= new Agent();
         while(!question.equals("sair"))
         {
             System.out.println(bot.ask(question));
             question = scanner.nextLine();
-        }
-        
-        
-    }
-    
+        } 
+    }    
 }
