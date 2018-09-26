@@ -163,93 +163,158 @@ class Agent{
         lut[44][0] = "Quem assinou a carta de Hogwarts endereçada à Harry no inicio do livro?";
         lut[44][1] = "Minerva";
         
-        lut[50][0] = "";
-        lut[50][1] = "";
+        lut[50][0] = "Qual o nome do tio de harry?";
+        lut[50][1] = "Valter";
         
-        lut[51][0] = "";
-        lut[52][1] = "";
+        lut[51][0] = "Qual o nome da tia de harry?";
+        lut[52][1] = "petunia";
         
-        lut[53][0] = "";
-        lut[53][1] = "";
+        lut[53][0] = "O que significa trouxa?";
+        lut[53][1] = "Não bruxo";
         
-        lut[54][0] = "";
-        lut[54][1] = "";
+        lut[54][0] = "Quem são os alunos inimigos de harry?";
+        lut[54][1] = "Draco, Crabbe e Goyle";
         
-        lut[55][0] = "";
-        lut[55][1] = "";
+        lut[55][0] = "Quantos jogadores tem cada equipe de quadribol?";
+        lut[55][1] = "7";
         
-        lut[56][0] = "";
-        lut[56][1] = "";
+        lut[56][0] = "Qual o nome do animal que protege a pedra filosofal?";
+        lut[56][1] = "Fofo";
         
-        lut[57][0] = "";
-        lut[57][1] = "";
+        lut[57][0] = "Qual o símbolo da casa de grifinoria?";
+        lut[57][1] = "leão";
         
-        lut[58][0] = "";
-        lut[58][1] = "";
+        lut[58][0] = "Qual o símbolo da casa de corvinal?";
+        lut[58][1] = "Águia";
         
-        lut[59][0] = "";
-        lut[59][1] = "";
+        lut[59][0] = "Qual o símbolo da casa de lufa lufa?";
+        lut[59][1] = "Texugo";
         
-        lut[60][0] = "";
-        lut[60][1] = "";
+        lut[60][0] = "Qual o símbolo da casa de sonserina?";
+        lut[60][1] = "Serpente";
         
-        lut[61][0] = "";
-        lut[61][1] = "";
+        lut[61][0] = "Que tipo de pena foi usada para fazer o núcleo da varinha de Voldemort?";
+        lut[61][1] = "pena de fênix";
         
-        lut[62][0] = "";
-        lut[62][1] = "";
+        lut[62][0] = "Quantos pontos vale o pomo de ouro?";
+        lut[62][1] = "150";
         
-        lut[63][0] = "";
-        lut[63][1] = "";
+        lut[63][0] = "Quem deu o feitiço para deixar o 'perebas' amarelo?";
+        lut[63][1] = "Fred";
         
-        lut[64][0] = "";
-        lut[64][1] = "";
+        lut[64][0] = "Qual o nome do professor de feitiços?";
+        lut[64][1] = "Filio Flitwick";
         
-        lut[65][0] = "";
-        lut[65][1] = "";
+        lut[65][0] = "O que Hagrid coloca em Duda quando ele come o bolo de Harry?";
+        lut[65][1] = "Rabo de porco";
         
-        lut[66][0] = "";
-        lut[66][1] = "";
+        lut[66][0] = "Quando é o aniversário de Harry?";
+        lut[66][1] = "31/06";
         
-        lut[67][0] = "";
-        lut[67][1] = "";
+        lut[67][0] = "Qual a cor dos olhos de Harry?";
+        lut[67][1] = "Azul";
         
-        lut[68][0] = "";
-        lut[68][1] = "";
+        lut[68][0] = "Qual o nome do lugar que harry compra seus materiais?";
+        lut[68][1] = "Beco Diagonal.";
         
-        lut[69][0] = "";
-        lut[69][1] = "";
+        lut[69][0] = "Qual o verdadeiro nome de Voldemort?";
+        lut[69][1] = "Tom Marvolo Riddle";
         
-        lut[70][0] = "";
-        lut[70][1] = "";
+        lut[70][0] = "Qual o monstro que habitava a câmara secreta?";
+        lut[70][1] = "Basilisco";
         
-        lut[71][0] = "";
-        lut[71][1] = "";
+        lut[71][0] = "Objetos que Voldemort usa para guardar partes de sua alma?";
+        lut[71][1] = "Horcruxes";
         
-        lut[72][0] = "";
-        lut[72][1] = "";
+        lut[72][0] = "Quem é o prisioneiro de Askaban?";
+        lut[72][1] = "Sirius Black";
         
-        lut[73][0] = "";
-        lut[73][1] = "";
+        lut[73][0] = "Quem é Igor Krum?";
+        lut[73][1] = "Famoso jogador de quadribol";
         
-        lut[74][0] = "";
-        lut[74][1] = "";
+        lut[74][0] = "Quem é a autora de Harry Potter?";
+        lut[74][1] = "J.K. Rowling";
         
-        lut[75][0] = "";
-        lut[75][1] = "";
+        lut[75][0] = "Qual o lema de Hogwarts?";
+        lut[75][1] = "Nunca faça cócegas em um dragão adormecido";
         
-        lut[76][0] = "";
-        lut[76][1] = "";
+        lut[76][0] = "Quem mata Dumbledore?";
+        lut[76][1] = "Severo Snape";
         
-        lut[77][0] = "";
-        lut[77][1] = "";
+        lut[77][0] = "Qual o nome do ator de Rony?";
+        lut[77][1] = "Rupert Grint";
         
-        lut[78][0] = "";
-        lut[78][1] = "";
+        lut[78][0] = "Qual o nome do dragão de Hagrid?";
+        lut[78][1] = "Noberto";
         
-        lut[79][0] = "";
-        lut[79][1] = "";
+        lut[79][0] = "Em que animago o pai de Harry conseguia se transformar?";
+        lut[79][1] = "Cervo";
         
+        lut[80][0] = "Qual o apelido de Tiago Potter?";
+        lut[80][1] = "Pontas";
+        
+        lut[81][0] = "Qual o apelido de Sirius?";
+        lut[81][1] = "Almofadinha";
+        
+        lut[82][0] = "Qual o apelido de Pedro?";
+        lut[83][1] = "Aluado";
+        
+        lut[84][0] = "Qual o apelido de Reno?";
+        lut[84][1] = "Rabicho";
+        
+        lut[85][0] = "Qual o nome da professora que Nagini mata?";
+        lut[85][1] = "Caridade Burbage";
+        
+        lut[86][0] = "De quem Voldemort pede a varinha para matar Harry?";
+        lut[86][1] = "Lúcio Malfoy";
+        
+        lut[87][0] = "De que é feita a varinha de Lucio Malfoy?";
+        lut[87][1] = "Olmo. E o núcleo é de fibra de coração de dragão";
+        
+        lut[88][0] = "Quem perde a orelha?";
+        lut[88][1] = "Jorge";
+        
+        lut[89][0] = "O que Dumbledore deixa para Rony?";
+        lut[89][1] = "Desiluminador";
+        
+        lut[90][0] = "O que Dumbledore deixa para Hermione?";
+        lut[90][1] = "Um livro";
+        
+        lut[91][0] = "O que Dumbledore deixa para Harry?";
+        lut[91][1] = "Pomo de Ouro";
+        
+        lut[92][0] = "Para onde harry vai quando é atacado no bar por comensais da morte?";
+        lut[92][1] = "Casa de Sirius";
+        
+        lut[93][0] = "O que significa R.A.B?";
+        lut[93][1] = "Régulo Arthuro Black";
+        
+        lut[94][0] = "O que está escrito no profeta diario sobre harry?";
+        lut[94][1] = "Indesejável n1";
+        
+        lut[95][0] = "O que Dobby diz a harry quando o reencontra?";
+        lut[95][1] = "Harry Potter, há quanto tempo?!";
+        
+        lut[96][0] = "Qual o nome do livro que Rita Skeeter escreveu sobre Dumbledore?";
+        lut[96][1] = "A vida e as mentiras de Alvo Dumbledore";
+        
+        lut[97][0] = "Onde Voldemort mata Severo Snape?";
+        lut[97][1] = "Casa dos Gritos";
+        
+        lut[98][0] = "Quem mata Severo Snape?";
+        lut[98][1] = "Voldemort";
+        
+        lut[99][0] = "Qual o nome dos filhos de Harry Potter?";
+        lut[99][1] = "Tiago, Alvo e Lilian";
+        
+        lut[100][0] = "Quem foi a pessoa mais corajosa que Harry ja conheceu?";
+        lut[100][1] = "Severo Snape";
+        
+        lut[101][0] = "Qual o nome dos filhos de Hermione com Rony?";
+        lut[101][1] = "Rosa e Hugo";
+        
+        
+       
        
     }
     
@@ -259,7 +324,7 @@ class Agent{
     {
         
         
-       String answer ="Idk, i'm sorry.";
+       String answer ="Eu não sei! Trouxa!";
         boolean found =false;
         boolean end=false;
         int i= 0;
@@ -295,7 +360,7 @@ public class Main {
        
        
         System.out.println("Oi, sou um Potterhead.");
-        System.out.println("Qual a sua dúvida sobre A Pedra Filosofal?");
+        System.out.println("Qual a sua dúvida sobre HP?");
         
         Scanner scanner = new Scanner(System.in);
         String  question = scanner .nextLine();
